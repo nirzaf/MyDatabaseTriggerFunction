@@ -3,9 +3,9 @@ using Microsoft.Extensions.Logging;
 
 namespace MyDatabaseTriggerFunction
 {
-    public static class Function1
+    public static class DatabaseTrigger
     {
-        [FunctionName("Function1")]
+        [FunctionName("DatabaseTrigger")]
         public static void Run([QueueTrigger("myqueue-items", Connection = "")] string myQueueItem, ILogger log)
         {
             log.LogInformation($"C# Queue trigger function processed: {myQueueItem}");
